@@ -2,13 +2,16 @@ import TodoItem from './TodoItem';
 
 import styles from '../modules/list.module.css'
 
-function TodoList({todos}){
+function TodoList({todos, setTodos}){
+
+    const sorted = todos.slice().sort((a,b) => Number(a.done - b.done));
+
     return (
         <>
             <div className={styles.list}>
-                {todos.map(
+                {sorted.map(
                     (item) => (
-                        <TodoItem item={item} />
+                        <TodoItem key={item.name} item={item} todos={todos} setTodos={setTodos}/>
                     )
                 )}
             </div>

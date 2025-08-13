@@ -3,6 +3,7 @@
     color: #353935;
     font-size: 20px;
     margin: 0 auto;
+    cursor: pointer;
 }
 .itemName{
     font-weight: 700;
@@ -20,4 +21,7 @@
     margin-top: -5px;
     border-radius: 4px;
     cursor: pointer;
+}
+.completed{
+    text-decoration: line-through;
 }
