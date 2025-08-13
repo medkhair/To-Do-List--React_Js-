@@ -1,8 +1,20 @@
- 
+import styles from '../modules/todoItem.module.css'
+
+
 function TodoItem({item}){
     return (
         <>
-            <h3>{item}</h3>
+            <div className={styles.item}>
+                <div className={styles.itemName}>{item}
+                    <span>
+                        <button className={styles.delete}>
+                            X
+                        </button>
+                    </span>
+                </div>
+                
+            </div>
+            <hr className={styles.line}/>
         </>
     )
 }
